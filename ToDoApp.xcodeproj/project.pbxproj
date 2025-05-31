@@ -6,6 +6,11 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		0C875B432DEB13DA00455952 /* ToDoData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C875B412DEB13DA00455952 /* ToDoData+CoreDataClass.swift */; };
+		0C875B442DEB13DA00455952 /* ToDoData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C875B422DEB13DA00455952 /* ToDoData+CoreDataProperties.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		0C875B1E2DEB10A200455952 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -27,6 +32,8 @@
 		0C875B042DEB10A000455952 /* ToDoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C875B1D2DEB10A200455952 /* ToDoAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToDoAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C875B272DEB10A200455952 /* ToDoAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToDoAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0C875B412DEB13DA00455952 /* ToDoData+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ToDoData+CoreDataClass.swift"; sourceTree = "<group>"; };
+		0C875B422DEB13DA00455952 /* ToDoData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ToDoData+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -88,6 +95,8 @@
 		0C875AFB2DEB10A000455952 = {
 			isa = PBXGroup;
 			children = (
+				0C875B412DEB13DA00455952 /* ToDoData+CoreDataClass.swift */,
+				0C875B422DEB13DA00455952 /* ToDoData+CoreDataProperties.swift */,
 				0C875B062DEB10A000455952 /* ToDoApp */,
 				0C875B202DEB10A200455952 /* ToDoAppTests */,
 				0C875B2A2DEB10A200455952 /* ToDoAppUITests */,
@@ -249,6 +258,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C875B432DEB13DA00455952 /* ToDoData+CoreDataClass.swift in Sources */,
+				0C875B442DEB13DA00455952 /* ToDoData+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
