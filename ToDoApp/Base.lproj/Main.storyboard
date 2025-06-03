@@ -117,23 +117,104 @@
                     <navigationItem key="navigationItem" id="FxM-91-leI"/>
                     <connections>
                         <outlet property="tableView" destination="d8a-ec-z4h" id="7fq-Rm-Vse"/>
-                        <segue destination="0Kg-sL-WZt" kind="presentation" identifier="ToDoCell" id="ugQ-pM-09j"/>
+                        <segue destination="0Kg-sL-WZt" kind="show" identifier="ToDoCell" id="ugQ-pM-09j"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1052.6717557251909" y="-27.464788732394368"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="A9F-cs-kdT">
             <objects>
-                <viewController id="0Kg-sL-WZt" sceneMemberID="viewController">
+                <viewController id="0Kg-sL-WZt" customClass="DetailViewController" customModule="ToDoApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Cz6-Q5-kfk">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="u0b-hI-ps7">
+                                <rect key="frame" x="25" y="175" width="343" height="35"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JMM-Ld-iN8" userLabel="Red Button">
+                                        <rect key="frame" x="0.0" y="0.0" width="74.666666666666671" height="35"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Red"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6f9-SS-uEk" userLabel="Green Button">
+                                        <rect key="frame" x="89.666666666666686" y="0.0" width="74.333333333333314" height="35"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Green"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tah-7o-dyb" userLabel="Blue Button">
+                                        <rect key="frame" x="179" y="0.0" width="74.666666666666686" height="35"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Blue"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bzW-zw-Fjy" userLabel="Purple Button">
+                                        <rect key="frame" x="268.66666666666669" y="0.0" width="74.333333333333314" height="35"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Purple"/>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="3go-Bj-SAV"/>
+                                </constraints>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y1J-tw-aig" userLabel="Background VIew">
+                                <rect key="frame" x="25" y="250" width="343" height="200"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="text" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="AKT-H3-cLt">
+                                        <rect key="frame" x="15" y="8" width="313" height="184"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.9311063213567673" green="0.82343561923848563" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="R79-wG-l3F"/>
+                                    <constraint firstItem="AKT-H3-cLt" firstAttribute="top" secondItem="Y1J-tw-aig" secondAttribute="top" constant="8" id="VmP-he-J5T"/>
+                                    <constraint firstItem="AKT-H3-cLt" firstAttribute="leading" secondItem="Y1J-tw-aig" secondAttribute="leading" constant="15" id="cd3-hn-WB7"/>
+                                    <constraint firstAttribute="bottom" secondItem="AKT-H3-cLt" secondAttribute="bottom" constant="8" id="nID-FK-XB1"/>
+                                    <constraint firstAttribute="trailing" secondItem="AKT-H3-cLt" secondAttribute="trailing" constant="15" id="oFI-r2-wdS"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BQx-tn-rkE">
+                                <rect key="frame" x="25" y="490" width="343" height="40"/>
+                                <color key="backgroundColor" red="0.69405174130000002" green="0.74558064980000005" blue="0.96983832120000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="K0R-8a-MT5"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="d8a-IL-a25"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="BQx-tn-rkE" firstAttribute="leading" secondItem="d8a-IL-a25" secondAttribute="leading" constant="25" id="0bQ-Zo-tJK"/>
+                            <constraint firstItem="u0b-hI-ps7" firstAttribute="leading" secondItem="d8a-IL-a25" secondAttribute="leading" constant="25" id="5i4-DT-VcE"/>
+                            <constraint firstItem="d8a-IL-a25" firstAttribute="trailing" secondItem="u0b-hI-ps7" secondAttribute="trailing" constant="25" id="Bfl-Li-PoU"/>
+                            <constraint firstItem="d8a-IL-a25" firstAttribute="trailing" secondItem="BQx-tn-rkE" secondAttribute="trailing" constant="25" id="KIX-FJ-ddF"/>
+                            <constraint firstItem="d8a-IL-a25" firstAttribute="trailing" secondItem="Y1J-tw-aig" secondAttribute="trailing" constant="25" id="gFn-b2-cwc"/>
+                            <constraint firstItem="Y1J-tw-aig" firstAttribute="leading" secondItem="d8a-IL-a25" secondAttribute="leading" constant="25" id="gbZ-Bx-dVE"/>
+                            <constraint firstItem="u0b-hI-ps7" firstAttribute="top" secondItem="d8a-IL-a25" secondAttribute="top" constant="20" id="ipt-li-Rmb"/>
+                            <constraint firstItem="Y1J-tw-aig" firstAttribute="top" secondItem="u0b-hI-ps7" secondAttribute="bottom" constant="40" id="mH4-tI-0rw"/>
+                            <constraint firstItem="BQx-tn-rkE" firstAttribute="top" secondItem="Y1J-tw-aig" secondAttribute="bottom" constant="40" id="oya-Vp-v7j"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="dz5-Ro-jhl"/>
+                    <connections>
+                        <outlet property="blueButton" destination="tah-7o-dyb" id="8RE-Ne-d1H"/>
+                        <outlet property="greenButton" destination="6f9-SS-uEk" id="Wp8-ku-PhI"/>
+                        <outlet property="purpleButton" destination="bzW-zw-Fjy" id="BG5-fp-IDE"/>
+                        <outlet property="redButton" destination="JMM-Ld-iN8" id="40e-Br-9NG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="svL-p5-8wS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -144,8 +225,8 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="A18-4E-JXj" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="bLP-OH-5D5">
-                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="bLP-OH-5D5">
+                        <rect key="frame" x="0.0" y="59" width="393" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <navigationBarAppearance key="standardAppearance"/>
                         <navigationBarAppearance key="scrollEdgeAppearance"/>
@@ -162,6 +243,9 @@
     </scenes>
     <resources>
         <image name="pencil.tip" catalog="system" width="99" height="128"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

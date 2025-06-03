@@ -53,8 +53,22 @@ extension ViewController: UITableViewDataSource {
         cell.toDoData = toDoData[indexPath.row]
         
         // 셀위에 있는 버튼이 눌렸을때 (뷰컨트롤러에서) 어떤 행동을 하기 위해서 클로저 전달
-        
-        
-        return UITableViewCell()
+        cell.updateButtonPressed = { [weak self] (senderCell) in
+            // 뷰컨트롤러에 있는 세그웨이의 실행
+            self?.performSegue(withIdentifier: "ToDoCell", sender: indexPath)
+        }
+        return cell
+    }
+}
+
+extension ViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "ToDoCell", sender: indexPath)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ToDoCell" {
+            let detailVC = segue.destination as! DetailViewController
+        }
     }
 }
