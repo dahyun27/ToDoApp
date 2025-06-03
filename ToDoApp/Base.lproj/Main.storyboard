@@ -56,6 +56,9 @@
                                                                             <state key="normal" title="UPDATE" image="pencil.tip" catalog="system">
                                                                                 <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                             </state>
+                                                                            <connections>
+                                                                                <action selector="updateButtonTapped:" destination="QFI-lN-wDo" eventType="touchUpInside" id="9SA-sv-WsK"/>
+                                                                            </connections>
                                                                         </button>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2025-05-31" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qWK-5M-wFf">
                                                                             <rect key="frame" x="0.0" y="13" width="79" height="17"/>
