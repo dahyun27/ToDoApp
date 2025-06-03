@@ -140,24 +140,36 @@
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Red"/>
+                                        <connections>
+                                            <action selector="colorButtonTapped:" destination="0Kg-sL-WZt" eventType="touchUpInside" id="a6m-wP-XmT"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6f9-SS-uEk" userLabel="Green Button">
                                         <rect key="frame" x="89.666666666666686" y="0.0" width="74.333333333333314" height="35"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Green"/>
+                                        <connections>
+                                            <action selector="colorButtonTapped:" destination="0Kg-sL-WZt" eventType="touchUpInside" id="Otj-4T-azQ"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tah-7o-dyb" userLabel="Blue Button">
                                         <rect key="frame" x="179" y="0.0" width="74.666666666666686" height="35"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Blue"/>
+                                        <connections>
+                                            <action selector="colorButtonTapped:" destination="0Kg-sL-WZt" eventType="touchUpInside" id="4iU-WV-zj3"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bzW-zw-Fjy" userLabel="Purple Button">
                                         <rect key="frame" x="268.66666666666669" y="0.0" width="74.333333333333314" height="35"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Purple"/>
+                                        <connections>
+                                            <action selector="colorButtonTapped:" destination="0Kg-sL-WZt" eventType="touchUpInside" id="CON-qK-kWi"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -192,6 +204,9 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="saveButtonTapped:" destination="0Kg-sL-WZt" eventType="touchUpInside" id="5m7-98-COK"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="d8a-IL-a25"/>
@@ -210,10 +225,13 @@
                     </view>
                     <navigationItem key="navigationItem" id="dz5-Ro-jhl"/>
                     <connections>
+                        <outlet property="backgroundView" destination="Y1J-tw-aig" id="3Nu-CN-54t"/>
                         <outlet property="blueButton" destination="tah-7o-dyb" id="8RE-Ne-d1H"/>
                         <outlet property="greenButton" destination="6f9-SS-uEk" id="Wp8-ku-PhI"/>
+                        <outlet property="mainTextView" destination="AKT-H3-cLt" id="621-uI-MeX"/>
                         <outlet property="purpleButton" destination="bzW-zw-Fjy" id="BG5-fp-IDE"/>
                         <outlet property="redButton" destination="JMM-Ld-iN8" id="40e-Br-9NG"/>
+                        <outlet property="saveButton" destination="BQx-tn-rkE" id="s7n-j3-pBa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="svL-p5-8wS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
